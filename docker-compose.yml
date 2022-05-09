@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    container_name: xss_vulnerability_challenges
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 9003:80
+    volumes:
+       - ./src/:/var/www/html/
+    image: moeinfatehi/xss_vulnerability_challenges:latest
